@@ -10,7 +10,7 @@ class BandsController < ApplicationController
   # GET /bands/1
   # GET /bands/1.json
   def show
-    @author = Band.find(params[:id])
+    @band = Band.find(params[:id])
   end
 
   # GET /bands/new
