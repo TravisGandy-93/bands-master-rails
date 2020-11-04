@@ -1,0 +1,22 @@
+<p>
+  <div class="name">
+    <h1><%= @band.name %></h1>
+  </div>
+</p>
+
+<div class="name">
+  <h2>Songs</h2>
+</div>
+
+<% @band.songs.each do |song| %>
+  <div class="name">
+    <p>Name: <%= link_to song.name, song %><p>
+  </div>
+ 
+<%end%>
+
+<%= link_to 'Edit Band', edit_band_path(@band), class: "btn btn-default btn-lg" %> |
+<%= link_to 'New Song', new_song_path, class: "btn btn-default btn-lg" %>
+<br/>
+<div class="name"><%= link_to 'Back', bands_path %></div>
+</div>
